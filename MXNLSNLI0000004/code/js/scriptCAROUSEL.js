@@ -1,1 +1,1 @@
-const v_pics_values = ["MXNLSNLI0000004/fotos/N01f01.jpg","MXNLSNLI0000004/fotos/N01f02.jpg","MXNLSNLI0000004/fotos/N01f03.jpg","MXNLSNLI0000004/fotos/N01f04.jpg","MXNLSNLI0000004/fotos/N01f05.jpg",];
+const v_pics_values = ["MXNLSNLI0000004/fotos/N01f01.jpg","MXNLSNLI0000004/fotos/N01f02.jpg","MXNLSNLI0000004/fotos/N01f03.jpg","MXNLSNLI0000004/fotos/N01f04.jpg","MXNLSNLI0000004/fotos/N01f05.jpg",];const v_promo_values = ["MXNLSNLI0000004/promos/promos01.html",];const v_services_values = ["MXNLSNLI0000004/services/services01.html",];
