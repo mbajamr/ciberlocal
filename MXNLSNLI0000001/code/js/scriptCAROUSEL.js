@@ -1,0 +1,1 @@
+const v_pics_values = ["MXNLSNLI0000001/fotos/2009.jpg","MXNLSNLI0000001/fotos/2022.jpg","MXNLSNLI0000001/fotos/2023.jpg",];

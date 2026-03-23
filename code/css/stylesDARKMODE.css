@@ -1,0 +1,63 @@
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.light-mode a:link {
+    color: blue;
+}
+
+body.light-mode a:visited {
+    color: purple;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode a:link {
+    color: #0A84FF;
+}
+
+body.dark-mode a:visited {
+    color: #5A6AFF;
+}
+
+/* Example: More Elements */
+body.dark-mode .bordered-element {
+    border-color: gray;
+}
+
+/* Light mode example */
+body.light-mode .bordered-element {
+    border-color: black;
+}
+
+body.dark-mode .input-field {
+    background-color: #333;
+    color: white;
+    border: 1px solid gray;
+}
+
+body.light-mode .input-field {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+body.dark-mode .button {
+    background-color: #444;
+    color: white;
+    border: 1px solid gray;
+}
+
+body.light-mode .button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+

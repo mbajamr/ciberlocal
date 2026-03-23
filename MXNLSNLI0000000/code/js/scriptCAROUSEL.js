@@ -1,0 +1,1 @@
+const v_pics_values = ["MXNLSNLI0000000/fotos/Foto_1.jpg","MXNLSNLI0000000/fotos/Foto_2.jpg","MXNLSNLI0000000/fotos/Foto_3.jpg","MXNLSNLI0000000/fotos/Foto_4.jpg","MXNLSNLI0000000/fotos/Foto_5.jpg",];

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html id="search" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiberLocal.com</title>
+    <link href="code/css/stylesSEARCH.css" rel="stylesheet">
+    <!--<link href="code/css/stylesHEADER.css" rel="stylesheet">-->
+    <!--<link href="code/css/stylesCOMMON.css" rel="stylesheet">-->
+
+</head>
+
+<body>
+<center >
+
+    <div style="height: 20px;"></div>
+        <svg id='sunmoonpage' fill='black' width='80px' height='40px' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg' style='vertical-align: middle; margin-left: 1px;' onclick='cambiarEstilo()'><path d='m0.29 2.32c-0.77 0-1.39 0.63-1.39 1.39s0.63 1.39 1.39 1.39 1.39-0.63 1.39-1.39-0.63-1.39-1.39-1.39zm3.57 1.17-1.37-0.69 0.49-1.46c0.07-0.21-0.12-0.43-0.33-0.33l-1.46 0.49-0.69-1.37c-0.09-0.17-0.26-0.17-0.34 0l-0.69 1.37-1.46-0.49c-0.21-0.07-0.43 0.12-0.33 0.33l0.49 1.46-1.37 0.69c-0.17 0.09-0.17 0.26 0 0.34l1.37 0.69-0.49 1.46c-0.07 0.21 0.12 0.43 0.33 0.33l1.46-0.49 0.69 1.37c0.09 0.17 0.26 0.17 0.34 0l0.69-1.37 1.46 0.49c0.21 0.07 0.43-0.12 0.33-0.33l-0.49-1.46 1.37-0.69c0.18-0.09 0.18-0.26 0-0.34zm-2.27 1.54c-0.73 0.73-1.91 0.73-2.74 0s-0.73-1.91 0-2.74 1.91-0.73 2.74 0 0.73 1.91 0 2.74z'/><path d='m7 0c-1.56.52-2.69 2.00-2.69 3.74 0 2.19 1.77 3 3 3 1.74 0 3.22-1.13 3.74-2.69-.4.13-.82.22-1.27.22-2.19 0-3-1.77-3-3 0-.44.08-.87.22-1.27z'/></svg></SVG>
+            <div style="padding: 100px;">
+                <!-- This div acts as a separator -->
+            </div>
+            <div class="nosel txt-bld" style="font-size:25px;"><svg id='logo' width='60px' height='40px' viewBox='0 0 60 40' preserveAspectRatio='xMidYMid meet'><defs id='defs740' /><g id='g742'><image width='60' height='40' preserveAspectRatio='none' style='image-rendering:optimizeQuality;fill:#decd87' id='image744'/><ellipse style='fill:#000000' id='earleftborder' cx='11' cy='11' rx='9' ry='8'/><ellipse style='fill:#f2ae42' id='earleft' cx='11' cy='11' rx='6' ry='6'/><ellipse style='fill:#FFCFCC' id='earleftinner' cx='11' cy='11' rx='4' ry='4'/><ellipse style='fill:#000000' id='earrightborder' cx='50' cy='11' rx='9' ry='8'/><ellipse style='fill:#f2ae42' id='earright' cx='50' cy='11' rx='6' ry='6'/><ellipse style='fill:#FFCFCC' id='earrightinner' cx='50' cy='11' rx='3' ry='3'/><ellipse style='fill:#000000' id='faceborder' cx='29' cy='22' rx='28' ry='18.5'/><ellipse style='fill:#f2ae42' id='facecolor' cx='29' cy='22' rx='25' ry='16'/><path d='M 17 20 Q 30 14, 43 20' fill='none' stroke='purple' stroke-width='9.5' /><circle cx='17' cy='20' r='4.5' fill='purple'/><circle cx='43' cy='20' r='4.5' fill='purple'/><ellipse style='fill:#000000' id='facecolor' cx='19' cy='20' rx='3' ry='3' /><ellipse style='fill:#000000' id='facecolor' cx='41' cy='20' rx='3' ry='3' /><ellipse style='fill:#FFCFCC' id='facecolor' cx='30' cy='25' rx='3' ry='2' /><path d='M 21 28.5 A 5 5 0 0 0 29.5 28' fill='none' stroke='black' stroke-width='1'/><path d='M 30 28.5 A 5 5 0 0 0 38.5 28' fill='none' stroke='black' stroke-width='1'/></g></svg>ciberlocal.com</div>
+    <div>
+        <p>Busca - Encuentra - Disfruta</p>
+        <input type="text" id="searchInput" placeholder="Buscar..." autofocus/>
+    </div>
+
+    <main>
+        <!-- Search Results Section -->
+        <section id="searchResults" style="display: none;">
+            <h2></h2>
+            <div class="ccnt">
+            <table id="resultsList" class="txt-al" style="width: 320px"></table>
+            </div>
+        </section>
+
+        <div style="height: 150px;"></div> <!-- Adjust height as needed -->
+        <!-- Hidden Table -->
+        <table id="hiddenTable" style="display: none;">
+                    <tr><td>San Juan de los Lagos</td><td>Iglesia</td><td>main.html?local=MXNLSNLI0000000</td></tr><tr><td>La Flor de Michoacan</td><td>Paleteria</td><td>main.html?local=MXNLSNLI0000001</td></tr><tr><td>El Tule</td><td>Restaurant</td><td>main.html?local=MXNLSNLI0000002</td></tr><tr><td>Ferretera Mexico</td><td>Ferretera</td><td>main.html?local=MXNLSNLI0000003</td></tr><tr><td>Yoga & Pilates Sonia Ochoa</td><td>Yoga</td><td>main.html?local=MXNLSNLI0000004</td></tr><tr><td>Parque Roble SN</td><td>Parque</td><td>main.html?local=MXNLSNLI0000045</td></tr>
+        </table>
+
+    </main>
+	<div id="FOOTER"></div>
+    <!-- Include JavaScript -->
+        <script src="code/js/scriptCOMMON.js"></script>
+        <script src="code/js/scriptSEARCH.js"></script>
+        <script src="code/js/scriptAJAX.js"></script>
+        <script>
+        // Add event listener for Enter key press
+        document.getElementById('searchInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') { // Check if Enter key is pressed
+                event.preventDefault(); // Prevent default form submission behavior
+                search(); // Call the search function
+            }
+        });
+
+        // Listen for changes in localStorage and update the theme in all tabs
+        window.addEventListener('storage', (event) => {
+            if (event.key === 'theme') {
+                //const savedThemeForTabs = localStorage.getItem('theme');
+                setPage();
+            }
+        });
+        </script>
+        <script type="text/javascript">
+        var_success = showData('FOOTER.html','FOOTER');
+        </script>
+</body>
+</center>
+</html>

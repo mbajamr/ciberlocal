@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios y Servicios</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        h2.txt-ac { text-align: center; }
+        .billing-options { text-align: center; margin-bottom: 2rem; }
+        .billing-options input[type="radio"] { margin-right: 0.5rem; }
+        .billing-options label { margin-right: 1rem; cursor: pointer; }
+        .pricing-card { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+        .pricing-card .price { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .pricing-card ul { text-align: left; margin-bottom: 1.5rem; padding-left: 1rem; }
+        .pricing-card .button { margin-top: auto; }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <!-- MAIN TITLE -->
+            <h2 class="title is-3 txt-ac txt-fw txt-ws">Precios y Servicios</h2>
+
+            <!-- Radio Buttons -->
+            <div class="billing-options">
+                <input type="radio" id="monthly" name="billing" value="monthly" checked>
+                <label for="monthly">Mensual</label>
+                <input type="radio" id="annual" name="billing" value="annual">
+                <label for="annual">Anual</label>
+            </div>
+
+            <!-- Pricing Columns -->
+            <div class="columns is-multiline is-variable is-3">
+
+                
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                    <div class="pricing-card has-text-centered">
+                        <h3 class="title is-5">Básico</h3>
+                        <div class="price">Gratis</div>
+                        <ul>
+                            
+                                <li>Editar Texto</li>
+                            
+                                <li>Editar Fotos</li>
+                            
+                                <li>Editar Horario</li>
+                            
+                        </ul>
+                        <button class="button is-link is-fullwidth"
+                            onclick="window.open('https://www.google.com', '_blank')">
+                            ¡Regístrate aquí!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                    <div class="pricing-card has-text-centered">
+                        <h3 class="title is-5">Intermedio</h3>
+                        <div class="price">1000 MXN</div>
+                        <ul>
+                            
+                                <li>Editar Texto</li>
+                            
+                                <li>Editar Fotos</li>
+                            
+                                <li>Editar Horario</li>
+                            
+                                <li>Alta Encuestas</li>
+                            
+                                <li>Alta Vacantes</li>
+                            
+                        </ul>
+                        <button class="button is-info is-fullwidth"
+                            onclick="window.open('https://www.google.com', '_blank')">
+                            ¡Regístrate aquí!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                    <div class="pricing-card has-text-centered">
+                        <h3 class="title is-5">Profesional</h3>
+                        <div class="price">e,000 MXN</div>
+                        <ul>
+                            
+                                <li>Editar Texto</li>
+                            
+                                <li>Editar Fotos</li>
+                            
+                                <li>Editar Horario</li>
+                            
+                                <li>Alta Encuestas</li>
+                            
+                                <li>Alta Vacantes</li>
+                            
+                                <li>Reporte Tráfico</li>
+                            
+                                <li>Reporte Visitas</li>
+                            
+                        </ul>
+                        <button class="button is-success is-fullwidth"
+                            onclick="window.open('https://www.google.com', '_blank')">
+                            ¡Regístrate aquí!
+                        </button>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+</body>
+
+<script type="text/javascript">
+showData('../secs/HEADER.html','HEADER');
+</script>
+
+</html>

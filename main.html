@@ -1,0 +1,235 @@
+
+        <!DOCTYPE html>
+        <html id="pages" lang="en">
+		<script>
+		  //console.log("Main page loaded");
+		  
+		  const params = new URLSearchParams(window.location.search);
+		  const folder = params.get("local") || "MXNLSNLI0000000";
+
+		  
+		  //console.log(folder); // "folder1"
+		  //console.log("param1:", `${folder}/page.htm`);
+		  
+		  document.getElementById("output").innerText = "Folder is: " + folder;
+		  
+		  
+
+		  
+		</script>
+        <head>
+        
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            <!-- CSS CDN -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+            <link href="code/css/stylesCAROUSEL.css" rel="stylesheet">
+            <link href="code/css/stylesDARKMODE.css?v=1.0.1" rel="stylesheet">
+            <link href="code/css/stylesSHRICON.css" rel="stylesheet">
+
+        </head>
+        
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDHJNCML24"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-DDHJNCML24');
+        </script>
+        
+        <body>
+        <div id="SEPARATOR"></div>
+        <div id="HEADER"></div>
+        <div id="SEPARATOR"></div>
+        <div id="TITLE"></div>
+        <div id="3BALLS"></div>
+        <div id="CATEGORY"></div>
+        <div id="SEPARATOR"></div>
+        <div id="ICONS"></div>
+        <div id="KNOWUSHDR"></div>
+        <div id="KNOWUS"></div>
+        <div id="SERVICESHDR"></div>
+        <div id="SERVICES"></div>
+        <div id="SCHEDULEHDR"></div>
+        <div id="SCHEDULE"></div>
+        <div id="CONTACTHDR"></div>
+        <div id="CONTACT"></div>
+        <div id="PICSHDR"></div>
+        <div id="PICS"></div>
+        <div id="LOCATIONHDR"></div>
+        <div id="LOCATION"></div>
+        <div id="SHAREHDR"></div>
+        <div id="SHARE"></div>
+        <div id="PROMOSHDR"></div>
+        <div id="PROMOS"></div>
+        <div id="OWNERHDR"></div>
+        <div id="OWNER"></div>
+		<div id="FOOTER"></div>
+
+		<div id="popupModal" class="modal">
+		  <div class="modal-background" onclick="closeModal()"></div>
+
+		  <div class="modal-card" style="width:90%; max-width:1000px;">
+
+			<header class="modal-card-head">
+			  <p class="modal-card-title">Page</p>
+			  <button class="delete" onclick="closeModal()"></button>
+			</header>
+
+			<section id="modal-content" class="modal-card-body">
+			  Loading...
+			</section>
+
+		  </div>
+		</div>
+		
+
+        
+        </body>
+
+        <script>
+            //alert(window.innerWidth); 
+            // Listen for changes in localStorage and update the theme in all tabs
+            window.addEventListener('storage', (event) => {
+                if (event.key === 'theme') {
+                    setPage();
+                }
+            });
+        </script>
+        <script type="text/javascript">
+		//console.log("last setion start");
+		//const paramHEADER = `secs/HEADER.html`;
+		const paramTITLE = `${folder}/sec/TITLE.html`;
+		const paramCATEGORY = `${folder}/sec/CATEGORY.html`;
+		const param3BALLS = `${folder}/sec/3BALLS.html`;
+		const paramICONS = `${folder}/sec/ICONS.html`;
+		const paramKNOWUS = `${folder}/sec/KNOWUS.html`;
+		const paramCONTACT = `${folder}/sec/CONTACT.html`;
+		const paramSCHEDULE = `${folder}/sec/SCHEDULE.html`;
+		const paramLOCATION = `${folder}/maps/LOCATION.html`;
+		const paramSHARE = `${folder}/sec/SHARE.html`;
+		//console.log("Loading script paramHEADER:", paramHEADER);
+		const paramCAROUSEL = `${folder}/code/js/scriptCAROUSEL.js`;
+		//console.log("Value for paramCAROUSEL:", paramCAROUSEL);
+		const paramOPENHOURS = `${folder}/code/js/open_hours.js`;
+		
+		//const codes = ["code/js/scriptCOMMON.js", "code/js/scriptPAGES.js", "code/js/scriptAJAX.js", "code/js/scriptHEADER.js", "code/js/scriptBUTTON.js", "code/js/schedule_logic.js"]; // Example pattern
+		//codes.forEach(code => {
+		//  const script = document.createElement("script");
+		//  script.src = `${code}`;
+		//  script.type = "text/javascript";
+		//  document.head.appendChild(script);
+		//});
+
+		// Create the script element
+		//const scriptCAROUSEL = document.createElement("script");
+		//scriptCAROUSEL.src = paramCAROUSEL;
+		////scriptCAROUSEL.src = "MXNLSNLI0000000/code/js/scriptCAROUSEL.js"
+		//scriptCAROUSEL.type = "text/javascript";
+
+		
+		// Create the script element
+		//const scriptOPENHOURS = document.createElement("script");
+		//scriptOPENHOURS.src = paramOPENHOURS;
+		////scriptOPENHOURS.src = "MXNLSNLI0000000/code/js/open_hours.js"
+		//scriptOPENHOURS.type = "text/javascript";
+
+
+
+		// Wait for the script to load successfully
+		//scriptCAROUSEL.onload = function() {
+		//	console.log("Script loaded successfully!");
+
+		//};
+
+		// Handle any errors
+		//scriptCAROUSEL.onerror = function() {
+		//	console.error("Failed to load the script.");
+		//};
+		
+		// Append the script to the document head or body
+		//document.head.appendChild(scriptCAROUSEL);
+		
+		// Append the script to the document head or body
+		//document.head.appendChild(scriptOPENHOURS);
+		
+		
+				
+		const codes = ["code/js/scriptCOMMON.js", "code/js/scriptPAGES.js", "code/js/scriptAJAX.js", "code/js/scriptHEADER.js", "code/js/scriptBUTTON.js", paramCAROUSEL, paramOPENHOURS, "code/js/schedule_logic.js"]; 
+
+		// Helper function to check if the script exists before appending
+		function scriptExists(url) {
+		  return fetch(url, { method: 'HEAD' })
+			.then(response => response.ok)  // If the response is 200, it means the script exists
+			.catch(() => false);  // If fetch fails, the script doesn't exist
+		}
+
+		function loadScript(url) {
+		  return new Promise((resolve, reject) => {
+			const script = document.createElement("script");
+			script.src = url;
+			script.type = "text/javascript";
+
+			script.onload = () => resolve(url);
+			script.onerror = () => reject(`Failed to load script: ${url}`);
+
+			document.head.appendChild(script);
+		  });
+		}
+
+		// Use reduce to load scripts sequentially and call respective functions
+		codes.reduce((promise, code) => {
+		  return promise.then(() => {
+			const scriptUrl = `${code}`;
+			
+			return scriptExists(scriptUrl)  // Check if the script exists
+			  .then((exists) => {
+				if (exists) {
+			return loadScript(`${code}`).then(() => {
+			  console.log(`Script from ${code} loaded!`);
+
+			  // Call the respective function based on the code
+			  if (code === "code/js/schedule_logic.js") {
+			  	showData('secs/HEADER.html','HEADER');
+				showData(paramTITLE,'TITLE');
+				showData(paramCATEGORY,'CATEGORY');
+				showData(param3BALLS,'3BALLS');
+				showData(paramICONS,'ICONS');
+				showData('secs/SEPARATOR.html','SEPARATOR');
+				showData('secs/FOOTER.html','FOOTER')
+				show2Secs(paramKNOWUS,'KNOWUS','hdr/KNOWUS.html','KNOWUSHDR');
+				show2Secs('secs/SERVICES.html','SERVICES','hdr/SERVICES.html','SERVICESHDR');
+				show2Secs(paramCONTACT,'CONTACT','hdr/CONTACT.html','CONTACTHDR');
+				show2Secs(paramSCHEDULE,'SCHEDULE','hdr/SCHEDULE.html','SCHEDULEHDR');
+				show2Secs('secs/PICS.html','PICS','hdr/PICS.html','PICSHDR');
+				show2Secs(paramLOCATION,'LOCATION','hdr/LOCATION.html','LOCATIONHDR');
+				show2Secs(paramSHARE,'SHARE','hdr/SHARE.html','SHAREHDR');
+				show2Secs('secs/PROMOS.html','PROMOS','hdr/PROMOS.html','PROMOSHDR');
+				show2Secs('secs/OWNER.html','OWNER','hdr/OWNER.html','OWNERHDR');
+				}
+			});
+			} else {
+              console.warn(`Script from ${code} does not exist. Skipping...`);
+            }
+			})
+		  .catch((error) => {
+			console.error(error);  // Handle any loading errors
+		  });
+		});
+		}, Promise.resolve())
+		  .then(() => {
+			console.log("All scripts loaded and functions called successfully!");
+		  })
+		  .catch((error) => {
+			console.error(error);
+		  });
+		 
+        //console.log("last setion end");
+        </script>
+
+        </html>
+        

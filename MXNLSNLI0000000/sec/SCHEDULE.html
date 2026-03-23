@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Store Hours</title>
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
+
+<style>
+  .status-pill {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: auto;
+  }
+  .is-open { background:#48c774; }
+  .is-closed { background:#f14668; }
+  tr.is-current { background-color: #fff3cd !important; }
+</style>
+</head>
+
+<body class="section column is-12-mobile is-8-desktop is-offset-2-desktop">
+<section class="section">
+<div class="container cta-wrapper">
+<div class="columns is-centered">
+<div class="column is-10 has-text-centered">
+<h1 class="title">Store Hours</h1>
+
+<div id="storeStatus" class="notification is-light mb-4">
+  Checking status.
+</div>
+
+<!-- CONTROLS -->
+<div class="mb-4">
+  <button id="toggleView" class="button is-small is-info">
+    Expand to hourly view
+  </button>
+
+  <label class="checkbox ml-4">
+    <input type="checkbox" id="autoRefresh" checked>
+    Auto-refresh hourly
+  </label>
+</div>
+
+
+<div class="table-container">
+<table class="table is-bordered is-striped is-fullwidth is-narrow">
+<thead>
+<tr class="has-background-link-light">
+  <th>Time</th>
+  <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th>
+</tr>
+</thead>
+<tbody id="hours-body"></tbody>
+</table>
+</div>
+
+<!--  
+<script>
+const days = ;
+</script>
+
+<script src= "" >
+</script>
+
+<script src="../../code/js/schedule_logic.js"></script>
+-->
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>
