@@ -11,7 +11,7 @@
 		  //console.log(folder); // "folder1"
 		  //console.log("param1:", `${folder}/page.htm`);
 		  
-		  //document.getElementById("output").innerText = "Folder is: " + folder;
+		  document.getElementById("output").innerText = "Folder is: " + folder;
 		  
 		  
 
@@ -42,65 +42,11 @@
         </script>
         
         <body>
-        <div id="SEPARATOR"></div>
-        <div id="HEADER"></div>
-        <div id="SEPARATOR"></div>
-        <div id="TITLE"></div>
-        <div id="3BALLS"></div>
-        <div id="CATEGORY"></div>
-        <div id="SEPARATOR"></div>
-        <div id="ICONS"></div>
-        <div id="KNOWUSHDR"></div>
-        <div id="KNOWUS"></div>
-        <div id="SERVICESHDR"></div>
-        <div id="SERVICES"></div>
-        <div id="SCHEDULEHDR"></div>
-        <div id="SCHEDULE"></div>
-        <div id="CONTACTHDR"></div>
-        <div id="CONTACT"></div>
-        <div id="PICSHDR"></div>
-        <div id="PICS" data-carousel="pics"></div>
-		<div id="root"></div>
-        <div id="LOCATIONHDR"></div>
-        <div id="LOCATION"></div>
-        <div id="SHAREHDR"></div>
-        <div id="SHARE"></div>
-        <div id="PROMOSHDR"></div>
-        <div id="PROMOS"></div>
-        <div id="OWNERHDR"></div>
-        <div id="OWNER"></div>
-		<div id="FOOTER"></div>
-
-		<div id="popupModal" class="modal">
-		  <div class="modal-background" onclick="closeModal()"></div>
-
-		  <div class="modal-card" style="width:90%; max-width:1000px;">
-
-			<header class="modal-card-head">
-			  <p class="modal-card-title">Page</p>
-			  <button class="delete" onclick="closeModal()"></button>
-			</header>
-
-			<section id="modal-content" class="modal-card-body">
-			  Loading...
-			</section>
-
-		  </div>
-		</div>
-		
-
-        
+        <div id="SEARCH"></div>
+        <div id="MAIN"></div>       
         </body>
 
-        <!-- React CDN -->
-        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-        <!-- Babel (to allow JSX in browser) -->
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-
-
-		<script>
+        <script>
             //alert(window.innerWidth); 
             // Listen for changes in localStorage and update the theme in all tabs
             window.addEventListener('storage', (event) => {
@@ -109,13 +55,7 @@
                 }
             });
         </script>
-		<!--<script src="code/js/scriptREACT.js"></script> -->
         <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", () => {
-		//const picscontainer = document.getElementById("PICS");
-		//const picscontainer = "PICS";
-		//alert("picscontainer:"+ picscontainer);
-		
 		//console.log("last setion start");
 		//const paramHEADER = `secs/HEADER.html`;
 		const paramTITLE = `${folder}/sec/TITLE.html`;
@@ -129,7 +69,7 @@
 		const paramSHARE = `${folder}/sec/SHARE.html`;
 		//console.log("Loading script paramHEADER:", paramHEADER);
 		const paramCAROUSEL = `${folder}/code/js/scriptCAROUSEL.js`;
-		console.log("Value for paramCAROUSEL:", paramCAROUSEL);
+		//console.log("Value for paramCAROUSEL:", paramCAROUSEL);
 		const paramOPENHOURS = `${folder}/code/js/open_hours.js`;
 		
 		//const codes = ["code/js/scriptCOMMON.js", "code/js/scriptPAGES.js", "code/js/scriptAJAX.js", "code/js/scriptHEADER.js", "code/js/scriptBUTTON.js", "code/js/schedule_logic.js"]; // Example pattern
@@ -174,7 +114,7 @@
 		
 		
 				
-		const codes = ["code/js/scriptCOMMON.js", "code/js/scriptPAGES.js", "code/js/schedule_logic.js", paramOPENHOURS, paramCAROUSEL, "code/js/scriptAJAX.js", "code/js/scriptHEADER.js", "code/js/scriptBUTTON.js"]; 
+		const codes = ["code/js/scriptCOMMON.js", "code/js/scriptPAGES.js", "code/js/scriptAJAX.js", "code/js/scriptHEADER.js", "code/js/scriptBUTTON.js", paramCAROUSEL, paramOPENHOURS, "code/js/schedule_logic.js"]; 
 
 		// Helper function to check if the script exists before appending
 		function scriptExists(url) {
@@ -208,41 +148,24 @@
 			  console.log(`Script from ${code} loaded!`);
 
 			  // Call the respective function based on the code
-			  if (code === "code/js/scriptAJAX.js") {
-			  //if (code === "code/js/scriptREACT.js") {
-			  //if (code === "code/js/schedule_logic.js") {
-			  	<!--alerta("mensaje");-->
-				loadSection('secs/HEADER.html','HEADER');
-				<!--loadSection('${process.env.PUBLIC_URL}/secs/HEADER.html','HEADER');-->
-				loadSection(paramTITLE,'TITLE');
-				loadSection(paramCATEGORY,'CATEGORY');
-				loadSection(param3BALLS,'3BALLS');
-				loadSection(paramICONS,'ICONS');
-				loadSection('secs/SEPARATOR.html','SEPARATOR');
-				loadSection('secs/FOOTER.html','FOOTER');
-				//loadSection('secs/PICS.html','PICS');
-				//loadSection('secs/PROMOS.html','PROMOS');
-				loadBoth(paramKNOWUS,'KNOWUS','hdr/KNOWUS.html','KNOWUSHDR');
-				loadBoth('secs/SERVICES.html','SERVICES','hdr/SERVICES.html','SERVICESHDR');
-				loadBoth(paramCONTACT,'CONTACT','hdr/CONTACT.html','CONTACTHDR');
-				loadBoth(paramSCHEDULE,'SCHEDULE','hdr/SCHEDULE.html','SCHEDULEHDR');
-				loadBoth('secs/PICS.html','PICS','hdr/PICS.html','PICSHDR');
-				loadBoth(paramLOCATION,'LOCATION','hdr/LOCATION.html','LOCATIONHDR');
-				loadBoth(paramSHARE,'SHARE','hdr/SHARE.html','SHAREHDR');
-				loadBoth('secs/PROMOS.html','PROMOS','hdr/PROMOS.html','PROMOSHDR');
-				loadBoth('secs/OWNER.html','OWNER','hdr/OWNER.html','OWNERHDR');
-				//loadCarousel();
-              }
-			  //if (code === "code/js/scriptREACT.js") {			
-                //const container = document.querySelector("PICS");
-				//const container = document.querySelector('[data-carousel="pics"]');
-			  //  const picscontainer = document.getElementById("PICS");
-				//alert("picscontainer: "+ picscontainer);
-				//console.log(container); 
-				//createCarousel(container,"v_pics_values",{ type: "image", loop: true });
-			  //  createCarousel(picscontainer, v_pics_values,{ type: "image", loop: true });
-			    //createCarousel(document.querySelector("#carouselpics"),"v_pics_values",{ type: "image", loop: true });
-			  //}
+			  if (code === "code/js/schedule_logic.js") {
+			  	showData('secs/HEADER.html','HEADER');
+				showData(paramTITLE,'TITLE');
+				showData(paramCATEGORY,'CATEGORY');
+				showData(param3BALLS,'3BALLS');
+				showData(paramICONS,'ICONS');
+				showData('secs/SEPARATOR.html','SEPARATOR');
+				showData('secs/FOOTER.html','FOOTER')
+				show2Secs(paramKNOWUS,'KNOWUS','hdr/KNOWUS.html','KNOWUSHDR');
+				show2Secs('secs/SERVICES.html','SERVICES','hdr/SERVICES.html','SERVICESHDR');
+				show2Secs(paramCONTACT,'CONTACT','hdr/CONTACT.html','CONTACTHDR');
+				show2Secs(paramSCHEDULE,'SCHEDULE','hdr/SCHEDULE.html','SCHEDULEHDR');
+				show2Secs('secs/PICS.html','PICS','hdr/PICS.html','PICSHDR');
+				show2Secs(paramLOCATION,'LOCATION','hdr/LOCATION.html','LOCATIONHDR');
+				show2Secs(paramSHARE,'SHARE','hdr/SHARE.html','SHAREHDR');
+				show2Secs('secs/PROMOS.html','PROMOS','hdr/PROMOS.html','PROMOSHDR');
+				show2Secs('secs/OWNER.html','OWNER','hdr/OWNER.html','OWNERHDR');
+				}
 			});
 			} else {
               console.warn(`Script from ${code} does not exist. Skipping...`);
@@ -261,9 +184,6 @@
 		  });
 		 
         //console.log("last setion end");
-
-
-});
         </script>
 
         </html>

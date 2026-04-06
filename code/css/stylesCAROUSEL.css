@@ -1,27 +1,159 @@
 
 
-#carousel-container {
-    position: relative;
-      justify-content: center;
-      align-items: center;
+/* Layout container */
+.carousel-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.carousel-grid img {
+  width: 800px;
+  height: 600px;
+  object-fit: contain;
 }
 
-#prev {
-    left: 20px;
+/* Arrow containers */
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#next {
-    right: 20px;
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
+/* Arrow buttons */
+#prevbutton,
+#nextbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+#prevbutton:hover,
+#nextbutton:hover {
+  background-color: #555;
+}
+
+/*
+#prevbutton,
+#nextbutton {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+#prevbutton::before {
+  content: "";
+}
+
+#nextbutton::before {
+  content: "";
+}
+*/
+
+#prevbutton:hover,
+#nextbutton:hover {
+  background-color: #555;
+}
+
+/* Carousel viewport */
+.carousel {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dots container */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Individual dot */
+.dots button {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+/* Active dot */
+.dots button.active {
+  background: #fff;
+}
+
+/* Buttons */
+.prev,
+.next {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Optional: center buttons vertically */
+.prev, .next {
+  height: 100%;
+}
+
+
+/* Track layout */
+.track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+/* Slides take full width */
+.slide {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Image slides */
+.slide-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* HTML slides */
+.slide-html .slide-content {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto; /* scroll if content taller */
+}

@@ -1,4 +1,5 @@
-           
+   
+  
             const htmlId = document.documentElement.id;  // `document.documentElement` refers to the <html> element
             greyColor = 'grey';
 
@@ -155,23 +156,26 @@
 
             // Onload
             function otherFuncAfterAJAX(pcelda) {
-                //alert('other');
+                //alert('other '+pcelda);
                 //cambiarEstilo();
-                if (htmlId == "pages") {
+                //if (htmlId == "pages") {
                     actualizarImagen();
                     if (pcelda=='SERVICES') {
+                        //alert('SERVICES '+pcelda);
                         changePage(1,'carousel-content-services',v_services_values);
                     }
                     if (pcelda=='PROMOS') {
+                        //alert('PROMOS changePage '+pcelda);
                         changePage(1,'carousel-content-promos',v_promo_values);
                     }
-                    if (pcelda=='PICS') {
-                        changePage(1,'carousel-content-pics',v_pics_values);
-                    }
+                    //if (pcelda=='PICS') {
+                        //alert('other '+pcelda);
+                        //changePage(1,'carousel-content-pics',v_pics_values);
+                    //}
                     if (pcelda=='SCHEDULE') {
                         scheduleLogicInit();
                     }
-                }
+                //}
                 setPage();
             }            
 
