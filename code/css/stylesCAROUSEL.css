@@ -31,55 +31,7 @@
   cursor: pointer;
 }
 
-/* Arrow buttons */
-#prevbutton,
-#nextbutton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background 0.3s;
-}
-
-#prevbutton:hover,
-#nextbutton:hover {
-  background-color: #555;
-}
-
-/*
-#prevbutton,
-#nextbutton {
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background 0.3s;
-}
-
-#prevbutton::before {
-  content: "";
-}
-
-#nextbutton::before {
-  content: "";
-}
-*/
-
-#prevbutton:hover,
-#nextbutton:hover {
-  background-color: #555;
-}
 
 /* Carousel viewport */
 .carousel {
@@ -113,21 +65,6 @@
 .dots button.active {
   background: #fff;
 }
-
-/* Buttons */
-.prev,
-.next {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Optional: center buttons vertically */
-.prev, .next {
-  height: 100%;
-}
-
 
 /* Track layout */
 .track {

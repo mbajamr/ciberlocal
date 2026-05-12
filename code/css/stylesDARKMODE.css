@@ -1,63 +1,359 @@
 
-/* Light Mode Styles */
-body.light-mode {
-    background-color: white;
-    color: black;
+/* =========================
+   GLOBAL RESET / TRANSITIONS
+   ========================= */
+*,
+*::before,
+*::after {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-body.light-mode a:link {
-    color: blue;
+/* =========================
+   THEME VARIABLES (DEFAULT = LIGHT)
+   ========================= */
+:root {
+    /* Base */
+    --bg: #ffffff;
+    --text: #222222;
+    --link: #3273dc;
+    --link-visited: #7957d5;
+
+    --surface: #f5f5f5;
+    --surface-2: #ffffff;
+
+    --border: #dbdbdb;
+    --border-strong: #b5b5b5;
+
+    --navbar-bg: #ffffff;
+    --navbar-text: #222;
+
+    --arrow-color: #222;
+    
+    
+    --svg-fill-color: #222;
+
+    --bg-color: #ffffff;
+    --text-color: #222;
+
+    /* Links */
+    --link-color: #3273dc;
+    --link-visited: #7957d5;
+
+    /* Navbar */
+    --navbar-bg: #ffffff;
+    --navbar-text: #222;
+    --navbar-hover-bg: #f2f2f2;
+    --navbar-hover-text: #000;
+
+    /* Cards / boxes */
+    --card-bg: #ffffff;
+    --card-text: #222;
+
+    /* Tables */
+    --table-bg: #ffffff;
+    --table-text: #222;
+    --table-border: #ccc;
+    --table-head-bg: #f5f5f5;
+    --table-row-hover: #f2f2f2;
+
+    /* Forms */
+    --input-bg: #ffffff;
+    --input-text: #222;
+    --input-border: #ccc;
+    --input-placeholder: #777;
+    --label-text: #222;
+
+    /* Buttons */
+    --button-bg: #ffffff;
+    --button-text: #222;
+    --button-border: #ccc;
+    --button-hover-bg: #eaeaea;
+
+    /* Modals */
+    --modal-bg: #ffffff;
+    --modal-text: #222;
+
+    /* Borders & shadows */
+    --border-color: #000;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Selection */
+    --selection-bg: #3273dc;
+    --selection-text: #222;
+
+    /* img light mode */
+    --img-color: #000000;
 }
 
-body.light-mode a:visited {
-    color: purple;
-}
 
-/* Dark Mode Styles */
+
+/* =========================
+   DARK MODE OVERRIDES
+   ========================= */
 body.dark-mode {
-    background-color: black;
-    color: white;
+
+    --bg: #121212;
+    --text: #f5f5f5;
+    --link: #4ea3ff;
+    --link-visited: #9b8cff;
+
+    --surface: #1e1e1e;
+    --surface-2: #2a2a2a;
+
+    --border: #333;
+    --border-strong: #444;
+
+    --navbar-bg: #1f1f1f;
+    --navbar-text: #f5f5f5;
+
+    --arrow-color: #f5f5f5;
+    
+    
+    --svg-fill-color: #f5f5f5;
+        
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+
+    --link-color: #4ea3ff;
+    --link-visited: #9b8cff;
+
+    --navbar-bg: #1f1f1f;
+    --navbar-text: #f5f5f5;
+    --navbar-hover-bg: #2a2a2a;
+    --navbar-hover-text: #ffffff;
+
+    --card-bg: #1e1e1e;
+    --card-text: #f5f5f5;
+
+    --table-bg: #1e1e1e;
+    --table-text: #f5f5f5;
+    --table-border: #333;
+    --table-head-bg: #2a2a2a;
+    --table-row-hover: #2a2a2a;
+
+    --input-bg: #2a2a2a;
+    --input-text: #f5f5f5;
+    --input-border: #444;
+    --input-placeholder: #aaa;
+    --label-text: #ddd;
+
+    --button-bg: #2a2a2a;
+    --button-text: #f5f5f5;
+    --button-border: #444;
+    --button-hover-bg: #3a3a3a;
+
+    --modal-bg: #1e1e1e;
+    --modal-text: #f5f5f5;
+
+    --border-color: #444;
+    --shadow-color: rgba(0, 0, 0, 0.6);
+
+    --selection-bg: #4ea3ff;
+    --selection-text: #000;
+
+    /* img dark mode */
+    --img-color: #ffffff;
+
 }
 
-body.dark-mode a:link {
-    color: #0A84FF;
+/* =========================
+   GLOBAL BASE
+   ========================= */
+html {
+    color-scheme: light dark;
 }
 
-body.dark-mode a:visited {
-    color: #5A6AFF;
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
-/* Example: More Elements */
-body.dark-mode .bordered-element {
-    border-color: gray;
+/* Ensure text inherits properly */
+h1, h2, h3, h4, h5, h6,
+p, span, li, strong, small, label {
+    color: inherit;
 }
 
-/* Light mode example */
-body.light-mode .bordered-element {
-    border-color: black;
+/* =========================
+   LINKS
+   ========================= */
+a {
+    color: var(--link-color);
 }
 
-body.dark-mode .input-field {
-    background-color: #333;
-    color: white;
-    border: 1px solid gray;
+a:visited {
+    color: var(--link-visited);
 }
 
-body.light-mode .input-field {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+/* =========================
+   SELECTION
+   ========================= */
+::selection {
+    background: var(--selection-bg);
+    color: var(--selection-text);
 }
 
-body.dark-mode .button {
-    background-color: #444;
-    color: white;
-    border: 1px solid gray;
+/* =========================
+   NAVBAR (Bulma)
+   ========================= */
+.navbar {
+    background-color: var(--navbar-bg);
 }
 
-body.light-mode .button {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+.navbar-item,
+.navbar-link {
+    color: var(--navbar-text);
+}
+
+.navbar-item:hover,
+.navbar-link:hover {
+    background-color: var(--navbar-hover-bg);
+    color: var(--navbar-hover-text);
+}
+
+/* =========================
+   CARDS / BOXES
+   ========================= */
+.box,
+.card {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+/* =========================
+   TABLES
+   ========================= */
+.table {
+    background-color: var(--table-bg);
+    color: var(--table-text);
+}
+
+.table th,
+.table td {
+    border-color: var(--table-border);
+}
+
+.table thead {
+    background-color: var(--table-head-bg);
+}
+
+.table tbody tr:hover {
+    background-color: var(--table-row-hover);
+}
+
+/* =========================
+   FORMS
+   ========================= */
+input,
+textarea,
+select {
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border-color: var(--input-border);
+    color-scheme: light dark;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: var(--input-placeholder);
+}
+
+.label {
+    color: var(--label-text);
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-color: var(--button-border);
+}
+
+.button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* =========================
+   MODALS
+   ========================= */
+.modal-card,
+.modal-content {
+    background-color: var(--modal-bg);
+    color: var(--modal-text);
+}
+
+/* =========================
+   SVG / ICON FIX
+   ========================= */
+svg,
+svg:not(.no-dark) * {
+    fill: var(--svg-fill-color);
+}
+
+
+/* =========================
+   BULMA OVERRIDE FIXES
+   ========================= */
+body.dark-mode .has-text-dark {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .has-text-light {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .has-background-white {
+    background-color: var(--card-bg) !important;
+}
+
+/* =========================
+   INLINE STYLE SAFETY NET
+   ========================= */
+body.dark-mode [style*="color"] {
+    color: var(--text-color) !important;
+}
+
+/* =========================
+   GENERAL BORDERS
+   ========================= */
+.bordered-element {
+    border-color: var(--border-color);
+}
+
+
+/* =========================
+   BORDERS / HELPERS
+   ========================= */
+hr {
+    background-color: var(--border);
+}
+
+.bordered-element {
+    border: 1px solid var(--border-strong);
+}
+
+/* =========================
+   CAROUEL / ARROWS
+   ========================= */
+.prev,
+.next {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  height: 100%;
+
+  color: var(--arrow-color);
+}
+
+
+/* =========================
+   IMG 
+   ========================= */
+img {
+  border: 2px solid var(--img-color);
 }
 

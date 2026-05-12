@@ -10,6 +10,7 @@ let refreshTimer = null;
 /* =====================
    INIT FUNCTION (ONLY THIS RUNS AFTER LOAD)
 ===================== */
+
 function scheduleLogicInit() {
 
   const tbody = document.getElementById("hours-body");
@@ -17,6 +18,7 @@ function scheduleLogicInit() {
   const status = document.getElementById("storeStatus");
 
   if (!tbody || !toggleBtn || !status) {
+    //alert("Schedule section elements not found.");
     console.warn("Schedule section elements not found.");
     return;
   }

@@ -7,15 +7,6 @@
 		  const params = new URLSearchParams(window.location.search);
 		  const folder = params.get("local") || "MXNLSNLI0000000";
 
-		  
-		  //console.log(folder); // "folder1"
-		  //console.log("param1:", `${folder}/page.htm`);
-		  
-		  //document.getElementById("output").innerText = "Folder is: " + folder;
-		  
-		  
-
-		  
 		</script>
         <head>
         
@@ -24,20 +15,16 @@
         
             <!-- CSS CDN -->
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
             <link href="code/css/stylesCAROUSEL.css" rel="stylesheet">
-            <link href="code/css/stylesDARKMODE.css?v=1.0.1" rel="stylesheet">
+            <link href="code/css/stylesDARKMODE.css" rel="stylesheet">
             <link href="code/css/stylesSHRICON.css" rel="stylesheet">
 
         </head>
         
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDHJNCML24"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-DDHJNCML24');
         </script>
         
@@ -92,24 +79,14 @@
         
         </body>
 
-        <!-- React CDN -->
-        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-        <!-- Babel (to allow JSX in browser) -->
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 
 
 		<script>
             //alert(window.innerWidth); 
-            // Listen for changes in localStorage and update the theme in all tabs
-            window.addEventListener('storage', (event) => {
-                if (event.key === 'theme') {
-                    setPage();
-                }
-            });
+
         </script>
-		<!--<script src="code/js/scriptREACT.js"></script> -->
+		<script type="text/javascript" src="code/js/scriptMAIN.js"></script>
         <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", () => {
 		//const picscontainer = document.getElementById("PICS");
@@ -117,154 +94,11 @@
 		//alert("picscontainer:"+ picscontainer);
 		
 		//console.log("last setion start");
-		//const paramHEADER = `secs/HEADER.html`;
-		const paramTITLE = `${folder}/sec/TITLE.html`;
-		const paramCATEGORY = `${folder}/sec/CATEGORY.html`;
-		const param3BALLS = `${folder}/sec/3BALLS.html`;
-		const paramICONS = `${folder}/sec/ICONS.html`;
-		const paramKNOWUS = `${folder}/sec/KNOWUS.html`;
-		const paramCONTACT = `${folder}/sec/CONTACT.html`;
-		const paramSCHEDULE = `${folder}/sec/SCHEDULE.html`;
-		const paramLOCATION = `${folder}/maps/LOCATION.html`;
-		const paramSHARE = `${folder}/sec/SHARE.html`;
-		//console.log("Loading script paramHEADER:", paramHEADER);
-		const paramCAROUSEL = `${folder}/code/js/scriptCAROUSEL.js`;
-		console.log("Value for paramCAROUSEL:", paramCAROUSEL);
-		const paramOPENHOURS = `${folder}/code/js/open_hours.js`;
+		const paramFOLDER = `${folder}`;
 		
-		//const codes = ["code/js/scriptCOMMON.js", "code/js/scriptPAGES.js", "code/js/scriptAJAX.js", "code/js/scriptHEADER.js", "code/js/scriptBUTTON.js", "code/js/schedule_logic.js"]; // Example pattern
-		//codes.forEach(code => {
-		//  const script = document.createElement("script");
-		//  script.src = `${code}`;
-		//  script.type = "text/javascript";
-		//  document.head.appendChild(script);
-		//});
-
-		// Create the script element
-		//const scriptCAROUSEL = document.createElement("script");
-		//scriptCAROUSEL.src = paramCAROUSEL;
-		////scriptCAROUSEL.src = "MXNLSNLI0000000/code/js/scriptCAROUSEL.js"
-		//scriptCAROUSEL.type = "text/javascript";
-
-		
-		// Create the script element
-		//const scriptOPENHOURS = document.createElement("script");
-		//scriptOPENHOURS.src = paramOPENHOURS;
-		////scriptOPENHOURS.src = "MXNLSNLI0000000/code/js/open_hours.js"
-		//scriptOPENHOURS.type = "text/javascript";
-
-
-
-		// Wait for the script to load successfully
-		//scriptCAROUSEL.onload = function() {
-		//	console.log("Script loaded successfully!");
-
-		//};
-
-		// Handle any errors
-		//scriptCAROUSEL.onerror = function() {
-		//	console.error("Failed to load the script.");
-		//};
-		
-		// Append the script to the document head or body
-		//document.head.appendChild(scriptCAROUSEL);
-		
-		// Append the script to the document head or body
-		//document.head.appendChild(scriptOPENHOURS);
-		
-		
-				
-		const codes = ["code/js/scriptCOMMON.js", "code/js/scriptPAGES.js", "code/js/schedule_logic.js", paramOPENHOURS, paramCAROUSEL, "code/js/scriptAJAX.js", "code/js/scriptHEADER.js", "code/js/scriptBUTTON.js"]; 
-
-		// Helper function to check if the script exists before appending
-		function scriptExists(url) {
-		  return fetch(url, { method: 'HEAD' })
-			.then(response => response.ok)  // If the response is 200, it means the script exists
-			.catch(() => false);  // If fetch fails, the script doesn't exist
-		}
-
-		function loadScript(url) {
-		  return new Promise((resolve, reject) => {
-			const script = document.createElement("script");
-			script.src = url;
-			script.type = "text/javascript";
-
-			script.onload = () => resolve(url);
-			script.onerror = () => reject(`Failed to load script: ${url}`);
-
-			document.head.appendChild(script);
-		  });
-		}
-
-		// Use reduce to load scripts sequentially and call respective functions
-		codes.reduce((promise, code) => {
-		  return promise.then(() => {
-			const scriptUrl = `${code}`;
-			
-			return scriptExists(scriptUrl)  // Check if the script exists
-			  .then((exists) => {
-				if (exists) {
-			return loadScript(`${code}`).then(() => {
-			  console.log(`Script from ${code} loaded!`);
-
-			  // Call the respective function based on the code
-			  if (code === "code/js/scriptAJAX.js") {
-			  //if (code === "code/js/scriptREACT.js") {
-			  //if (code === "code/js/schedule_logic.js") {
-			  	<!--alerta("mensaje");-->
-				loadSection('secs/HEADER.html','HEADER');
-				<!--loadSection('${process.env.PUBLIC_URL}/secs/HEADER.html','HEADER');-->
-				loadSection(paramTITLE,'TITLE');
-				loadSection(paramCATEGORY,'CATEGORY');
-				loadSection(param3BALLS,'3BALLS');
-				loadSection(paramICONS,'ICONS');
-				loadSection('secs/SEPARATOR.html','SEPARATOR');
-				loadSection('secs/FOOTER.html','FOOTER');
-				//loadSection('secs/PICS.html','PICS');
-				//loadSection('secs/PROMOS.html','PROMOS');
-				loadBoth(paramKNOWUS,'KNOWUS','hdr/KNOWUS.html','KNOWUSHDR');
-				loadBoth('secs/SERVICES.html','SERVICES','hdr/SERVICES.html','SERVICESHDR');
-				loadBoth(paramCONTACT,'CONTACT','hdr/CONTACT.html','CONTACTHDR');
-				loadBoth(paramSCHEDULE,'SCHEDULE','hdr/SCHEDULE.html','SCHEDULEHDR');
-				loadBoth('secs/PICS.html','PICS','hdr/PICS.html','PICSHDR');
-				loadBoth(paramLOCATION,'LOCATION','hdr/LOCATION.html','LOCATIONHDR');
-				loadBoth(paramSHARE,'SHARE','hdr/SHARE.html','SHAREHDR');
-				loadBoth('secs/PROMOS.html','PROMOS','hdr/PROMOS.html','PROMOSHDR');
-				loadBoth('secs/OWNER.html','OWNER','hdr/OWNER.html','OWNERHDR');
-				//loadCarousel();
-              }
-			  //if (code === "code/js/scriptREACT.js") {			
-                //const container = document.querySelector("PICS");
-				//const container = document.querySelector('[data-carousel="pics"]');
-			  //  const picscontainer = document.getElementById("PICS");
-				//alert("picscontainer: "+ picscontainer);
-				//console.log(container); 
-				//createCarousel(container,"v_pics_values",{ type: "image", loop: true });
-			  //  createCarousel(picscontainer, v_pics_values,{ type: "image", loop: true });
-			    //createCarousel(document.querySelector("#carouselpics"),"v_pics_values",{ type: "image", loop: true });
-			  //}
-			});
-			} else {
-              console.warn(`Script from ${code} does not exist. Skipping...`);
-            }
-			})
-		  .catch((error) => {
-			console.error(error);  // Handle any loading errors
-		  });
-		});
-		}, Promise.resolve())
-		  .then(() => {
-			console.log("All scripts loaded and functions called successfully!");
-		  })
-		  .catch((error) => {
-			console.error(error);
-		  });
-		 
-        //console.log("last setion end");
-
+		loadAll(paramFOLDER);
 
 });
         </script>
-
         </html>
         
